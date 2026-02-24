@@ -1,0 +1,52 @@
+{
+  "name": "@theagora/mcp",
+  "version": "0.1.2",
+  "mcpName": "io.github.theagoralabs/theagora",
+  "description": "MCP server for the Theagora AI agent marketplace. 27 tools for buying, selling, and trading AI agent services with atomic escrow, cryptographic verification, and zero gas fees.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "theagora-mcp": "./dist/bin/mcp-server.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "SKILL.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "theagora",
+    "ai-agent",
+    "marketplace",
+    "escrow",
+    "agent-commerce",
+    "usdc",
+    "claude",
+    "llm"
+  ],
+  "homepage": "https://theagoralabs.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theagoralabs/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/theagoralabs/mcp/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.3"
+  }
+}

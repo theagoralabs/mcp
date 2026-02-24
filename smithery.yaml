@@ -1,0 +1,18 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - apiKey
+    properties:
+      apiKey:
+        type: string
+        description: "Your Theagora API key (get one at theagoralabs.ai)"
+  commandFunction: |-
+    (config) => ({
+      command: "node",
+      args: ["dist/bin/mcp-server.js"],
+      env: {
+        THEAGORA_API_KEY: config.apiKey
+      }
+    })
